@@ -5,6 +5,7 @@ A fork of [pvledoux Nice Time plugin](https://github.com/pvledoux/Nice_time.ee2_
 ## Differences from the original project
 * Multilanguage Support
 * Removed format, relative and prefix parameters. This is because all of these are now defined in the language files. 
+* Two ways to use the plugin as opposed to just one
 
 There are two ways to use this plugin
 
@@ -61,8 +62,8 @@ I will be updating this in future so that it can accept params.
 	</thead>
 	<tbody>
 		<tr>
-			<td>None</td>
-			<td>The actual list of dates is passed via POST in this format i.e. "datetime1\|datetime2\|datetime3\|..." e.g. "2013-09-04 6:31 pm|2012-10-16 6:31 am"</td>
+			<td>date</td>
+			<td>The actual list of datetimes. It can be passed via paramater "datetimes="" or via GET/POST. The format looks like "datetime1\|datetime2\|datetime3\|...". For example, "2013-09-04 6:31 pm|2012-10-16 6:31 am"</td>
 		</tr>
 	</tbody>
 </table>
@@ -84,7 +85,6 @@ Take a look at languages/english/nice_time_lang.php to know what language variab
 
 ## TODOs
 * Implement multilanguage support when outputting actual date as opposed to "time ago" phrases
-* In {exp:nice_time:convert_multiple}, make so that it accepts datetime as a param
 
 ##Licence
 Copyright (c) 2012, Pv Ledoux All rights reserved.
