@@ -98,7 +98,7 @@
 			switch ($time_type)
 			{
 				case 'second':
-					if ($is_plural === TRUE)
+					if ($is_plural === FALSE)
 					{
 						return sprintf(lang('time_ago_second'), $diff, lang($frame));
 					}
@@ -108,7 +108,7 @@
 					}
 					break;
 				case 'minute':
-					if ($is_plural === TRUE)
+					if ($is_plural === FALSE)
 					{
 						return sprintf(lang('time_ago_minute'), $diff, lang($frame));
 					}
@@ -118,7 +118,7 @@
 					}
 					break;
 				case 'hour':
-					if ($is_plural === TRUE)
+					if ($is_plural === FALSE)
 					{
 						return sprintf(lang('time_ago_hour'), $diff, lang($frame));
 					}
@@ -128,7 +128,7 @@
 					}
 					break;
 				case 'day':
-					if ($is_plural === TRUE)
+					if ($is_plural === FALSE)
 					{
 						return sprintf(lang('time_ago_day'), $diff, lang($frame));
 					}
@@ -138,7 +138,7 @@
 					}
 					break;
 				case 'week':
-					if ($is_plural === TRUE)
+					if ($is_plural === FALSE)
 					{
 						return sprintf(lang('time_ago_week'), $diff, lang($frame));
 					}
@@ -216,8 +216,8 @@
 
 		public function convert_multiple()
 		{
-			// TODO: Instead of using POST, get it from param.
-			$datetimes = $_POST['datetimes'];
+			// TODO: Instead of using GET/POST, get it from param.
+			$datetimes = $this->_ee->input->get_post('datetimes');
 
 			$variables		 = array();
 			$variable_row	 = array(
