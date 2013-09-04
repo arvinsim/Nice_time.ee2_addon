@@ -62,7 +62,7 @@ I will be updating this in future so that it can accept params.
 	<tbody>
 		<tr>
 			<td>None</td>
-			<td>The actual list of dates is passed via POST in this format i.e. "datetime1\|datetime2\|datetime3\|..." e.g. "2013-08-23T20:37:21+12:00|2013-08-22T19:08:29+12:00"</td>
+			<td>The actual list of dates is passed via POST in this format i.e. "datetime1\|datetime2\|datetime3\|..." e.g. "2013-09-04 6:31 pm|2012-10-16 6:31 am"</td>
 		</tr>
 	</tbody>
 </table>
