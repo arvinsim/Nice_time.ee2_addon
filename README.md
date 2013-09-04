@@ -5,40 +5,43 @@ A fork of [pvledoux Nice Time plugin](https://github.com/pvledoux/Nice_time.ee2_
 There are two ways to use this
 
 ## {exp:nice_time:convert}
+------------------------------------------------------------------
 
 Use this if you only plan to convert only one date
 
 ### Syntax
-------------------------------------------------------------------
-
+```
 {exp:nice_time:convert date="{entry_date}"}
 {exp:nice_time:convert date="2012-09-{segment_3}"}
 {exp:nice_time:convert date="+3 days"}
+```
 
 ### Parameter
-------------------------------------------------------------------
-
-date	Can be a string date or a unix timestamp.
+| Name  | Description | 
+|-------|-------------|
+|date	|Can be a string date or a unix timestamp.|
 
 ## {exp:nice_time_convert_multiple}
+------------------------------------------------------------------
 
 Use this if you plan to convert more than one date.
 This is not part of the core functionality. Rather, I created this to fit some of my needs(API related stuff)
 I will be updating this in future so that it can accept params.
 
 ### Syntax
-------------------------------------------------------------------
+```
 {exp:nice_time:convert_multiple}
 	{converted_date_list}
 		{datetime}
 		{time_ago}
 	{/converted_date_list}
 {/exp:nice_time:convert_multiple}
+```
 
 ### Parameter
-------------------------------------------------------------------
-None.	The actual list of dates is passed via POST in this format, "datetime1|datetime2|datetime3|..."
-		e.g. "2013-08-23T20:37:21+12:00|2013-08-22T19:08:29+12:00"	
+| Name  | Description | 
+|-------|-------------|
+|None	|The actual list of dates is passed via POST in this format, "datetime1|datetime2|datetime3|..." e.g. "2013-08-23T20:37:21+12:00|2013-08-22T19:08:29+12:00"|	
 
 ## Differences from the original project
 * Multilanguage Support
@@ -46,10 +49,11 @@ None.	The actual list of dates is passed via POST in this format, "datetime1|dat
 
 ## TODOs
 * Implement multilanguage support when outputting actual date as opposed to "time ago" phrases
-* In {exp:nice_time:convert_multiple}, make so that it accepts datetime param
+* In {exp:nice_time:convert_multiple}, make so that it accepts datetime as a param
 
 ##Licence
 Copyright (c) 2012, Pv Ledoux All rights reserved.
+
 Copyright (c) 2013, Arthur Vincent Simon All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
