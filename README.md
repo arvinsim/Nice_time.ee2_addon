@@ -20,11 +20,22 @@ Use this if you only plan to convert only one date
 ```
 
 ### Parameter
-| Name  | Description | 
-|-------|-------------|
-|date	|Can be a string date or a unix timestamp|
+<table>
+	<thead>
+		<tr>
+			<td>Name</td>
+			<td>Description</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>date</td>
+			<td>Can be a string date or a unix timestamp</td>
+		</tr>
+	</tbody>
+</table>
 
-## {exp:nice_time_convert_multiple}
+## {exp:nice_time:convert_multiple}
 
 Use this if you plan to convert more than one date.
 This is not part of the core functionality. Rather, I created this to fit some of my needs(API related stuff)
@@ -41,9 +52,20 @@ I will be updating this in future so that it can accept params.
 ```
 
 ### Parameter
-| Name  | Description | 
-|-------|-------------|
-|None	|The actual list of dates is passed via POST in this format i.e. "datetime1|datetime2|datetime3|..." e.g. "2013-08-23T20:37:21+12:00|2013-08-22T19:08:29+12:00"|	
+<table>
+	<thead>
+		<tr>
+			<td>Name</td>
+			<td>Description</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>None</td>
+			<td>The actual list of dates is passed via POST in this format i.e. "datetime1\|datetime2\|datetime3\|..." e.g. "2013-08-23T20:37:21+12:00|2013-08-22T19:08:29+12:00"</td>
+		</tr>
+	</tbody>
+</table>
 
 ## Defining languages
 
