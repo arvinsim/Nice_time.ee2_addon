@@ -2,10 +2,13 @@
 
 A fork of [pvledoux Nice Time plugin](https://github.com/pvledoux/Nice_time.ee2_addon) with multilanguage features
 
-There are two ways to use this
+## Differences from the original project
+* Multilanguage Support
+* Removed format, relative and prefix parameters. This is because all of these are now defined in the language files. 
+
+There are two ways to use this plugin
 
 ## {exp:nice_time:convert}
-------------------------------------------------------------------
 
 Use this if you only plan to convert only one date
 
@@ -19,10 +22,9 @@ Use this if you only plan to convert only one date
 ### Parameter
 | Name  | Description | 
 |-------|-------------|
-|date	|Can be a string date or a unix timestamp.|
+|date	|Can be a string date or a unix timestamp|
 
 ## {exp:nice_time_convert_multiple}
-------------------------------------------------------------------
 
 Use this if you plan to convert more than one date.
 This is not part of the core functionality. Rather, I created this to fit some of my needs(API related stuff)
@@ -41,11 +43,22 @@ I will be updating this in future so that it can accept params.
 ### Parameter
 | Name  | Description | 
 |-------|-------------|
-|None	|The actual list of dates is passed via POST in this format, "datetime1|datetime2|datetime3|..." e.g. "2013-08-23T20:37:21+12:00|2013-08-22T19:08:29+12:00"|	
+|None	|The actual list of dates is passed via POST in this format i.e. "datetime1|datetime2|datetime3|..." e.g. "2013-08-23T20:37:21+12:00|2013-08-22T19:08:29+12:00"|	
 
-## Differences from the original project
-* Multilanguage Support
-* Removed format, relative and prefix parameters. This is because all of these are now defined in the language files. 
+## Defining languages
+
+To add a new language, just add a language file inside Nice Time's languages folder 
+with this format 
+
+```
+<language>/nice_time_lang.php
+```
+
+The new language must be one of the languages defined in system/expressionengine/language/.
+
+This plugin decides what language to show based on the user's preferred language as set by ExpressionEngine
+
+Take a look at languages/english/nice_time_lang.php to know what language variables to define.
 
 ## TODOs
 * Implement multilanguage support when outputting actual date as opposed to "time ago" phrases
