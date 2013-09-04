@@ -23,8 +23,8 @@ Use this if you only plan to convert only one date
 <table>
 	<thead>
 		<tr>
-			<td>Name</td>
-			<td>Description</td>
+			<th>Name</th>
+			<th>Description</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -55,8 +55,8 @@ I will be updating this in future so that it can accept params.
 <table>
 	<thead>
 		<tr>
-			<td>Name</td>
-			<td>Description</td>
+			<th>Name</th>
+			<th>Description</th>
 		</tr>
 	</thead>
 	<tbody>
