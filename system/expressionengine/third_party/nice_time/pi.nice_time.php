@@ -57,11 +57,7 @@
 		 * @access	public
 		 * @var		array
 		 */
-		public $return_data	 = NULL;
 		private $_ee		 = NULL;
-		private $_date		 = NULL;
-		private $_format	 = NULL;
-		private $_relative	 = NULL;
 
 		/**
 		 * Constructor.
