@@ -52,14 +52,6 @@
 	class Nice_time
 	{
 		/**
-		 * Data returned from the plugin.
-		 *
-		 * @access	public
-		 * @var		array
-		 */
-		private $_ee		 = NULL;
-
-		/**
 		 * Constructor.
 		 *
 		 * @access	public
@@ -67,9 +59,7 @@
 		 */
 		public function __construct()
 		{
-			$this->_ee = & get_instance();
-
-			$this->_ee->lang->loadfile('nice_time');
+			ee()->lang->loadfile('nice_time');
 		}
 
 		private function _is_timestamp($string)
@@ -152,10 +142,10 @@
 		{
 			if (!$this->_is_timestamp($date))
 			{
-				$date = $this->_ee->localize->string_to_timestamp($date);
+				$date = ee()->localize->string_to_timestamp($date);
 			}
 
-			$diff = $this->_ee->localize->now - $date;
+			$diff = ee()->localize->now - $date;
 
 
 			if ($diff >= 0 && $diff < 5)
@@ -200,12 +190,12 @@
 			}
 
 			// Default
-			return $this->_ee->localize->decode_date(lang('format_full_date'), $date);
+			return ee()->localize->decode_date(lang('format_full_date'), $date);
 		}
 
 		public function convert()
 		{
-			$date = $this->_ee->TMPL->fetch_param('date', time());
+			$date = ee()->TMPL->fetch_param('date', time());
 
 			return $this->_get_converted_time_string($date);
 		}
@@ -214,7 +204,7 @@
 		{
 			// Get datetimes from param
 			// If not present, try to get it in GET/POST
-			$datetimes = $this->_ee->TMPL->fetch_param('datetimes', $this->_ee->input->get_post('datetimes'));
+			$datetimes = ee()->TMPL->fetch_param('datetimes', ee()->input->get_post('datetimes'));
 
 			$variables		 = array();
 			$variable_row	 = array(
@@ -222,7 +212,7 @@
 			);
 
 			// Fetch contents of the tag pair, ie, the form contents
-			$tagdata = $this->_ee->TMPL->tagdata;
+			$tagdata = ee()->TMPL->tagdata;
 
 			if (empty($datetimes) === FALSE)
 			{
@@ -246,7 +236,7 @@
 				$variables[] = $variable_row;
 
 				// Parse Language variables
-				$tagdata = $this->_ee->TMPL->parse_variables($tagdata, $variables);
+				$tagdata = ee()->TMPL->parse_variables($tagdata, $variables);
 			}
 
 			return $tagdata;
