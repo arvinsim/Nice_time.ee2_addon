@@ -190,7 +190,7 @@
 			}
 
 			// Default
-			return ee()->localize->decode_date(lang('format_full_date'), $date);
+			return ee()->localize->format_date(lang('format_full_date'), $date);
 		}
 
 		public function convert()
