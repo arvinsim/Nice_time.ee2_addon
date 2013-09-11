@@ -2,6 +2,8 @@
 
 A fork of [pvledoux Nice Time plugin](https://github.com/pvledoux/Nice_time.ee2_addon) with multilanguage features
 
+Now compatible with ExpressionEngine 2.7
+
 ## Differences from the original project
 * Multilanguage Support
 * Removed format, relative and prefix parameters. This is because all of these are now defined in the language files. 

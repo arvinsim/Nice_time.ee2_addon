@@ -4,7 +4,7 @@
 
 	$plugin_info = array(
 		'pi_name'			 => 'Nice Time',
-		'pi_version'		 => '0.3',
+		'pi_version'		 => '0.4',
 		'pi_author'			 => 'Arthur Vincent Simon',
 		'pi_author_email'	 => 'arthurvincent.simon@gmail.com',
 		'pi_author_url'		 => 'http://twitter.com/arvinsim/',
